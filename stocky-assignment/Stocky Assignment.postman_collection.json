@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "21a9d077-ef16-4002-a160-05907b35f354",
+		"name": "Stocky Assignment",
+		"description": "REST API collection for Stocky backend assignment.  \nBuilt using Go (Gin + Logrus) and PostgreSQL.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28771507"
+	},
+	"item": [
+		{
+			"name": "Reward",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"8b6ee0d2-db9d-42bb-9fc6-9e7e87a7bacf\",\r\n    \"stock_symbol\":\"KOTAK\",\r\n    \"quantity\":\"1\",\r\n    \"idempotency_key\":\"req-012\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reward",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reward"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/stats/8b6ee0d2-db9d-42bb-9fc6-9e7e87a7bacf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stats",
+						"8b6ee0d2-db9d-42bb-9fc6-9e7e87a7bacf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "historical-inr",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/historical-inr/8b6ee0d2-db9d-42bb-9fc6-9e7e87a7bacf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"historical-inr",
+						"8b6ee0d2-db9d-42bb-9fc6-9e7e87a7bacf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "today-stocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/today-stocks/8b6ee0d2-db9d-42bb-9fc6-9e7e87a7bacf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"today-stocks",
+						"8b6ee0d2-db9d-42bb-9fc6-9e7e87a7bacf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "portfolio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/portfolio/8b6ee0d2-db9d-42bb-9fc6-9e7e87a7bacf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"portfolio",
+						"8b6ee0d2-db9d-42bb-9fc6-9e7e87a7bacf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "corporate-action-split",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"action\":\"SPLIT\",\"symbol\":\"CISCO\", \"ratio\": 3.0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/corporate-action",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"corporate-action"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "corporate-action-merger",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"action\":\"MERGER\",\"symbol\":\"LT\", \"new_symbol\":\"CISCO\", \"ratio\": 2.0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/corporate-action",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"corporate-action"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "coporate-action-DELIST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"action\":\"DELIST\",\"symbol\":\"MAHINDRA\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/corporate-action",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"corporate-action"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
